@@ -1,11 +1,14 @@
 
 import './App.css'
+import Banner from './Components/Banner/Banner'
+import Navbar from './Components/Navbar/Navbar'
 
 function App() {
 
   return (
-    <div>
-      <button className="btn btn-primary">Click me</button>
+    <div className='w-[90%] mx-auto space-y-8'>
+      <Navbar></Navbar>
+      <Banner></Banner>
     </div>
     
   )
