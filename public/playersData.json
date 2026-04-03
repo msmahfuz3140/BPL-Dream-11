@@ -1,5 +1,5 @@
 [
-     {
+    {
         "id": 21,
         "name": "MS MAHFUZ",
         "country": "Bangladesh",
@@ -8,7 +8,40 @@
         "batting_style": "Right-hand bat",
         "bowling_style": "Right-arm fast",
         "price": 9999999,
-        "image": "https://i.ibb.co.com/67TNp2J3/Whats-App-Image-2026-03-12-at-11-48-05-PM.jpg"
+        "image": "https://i.ibb.co.com/RT2z71VH/1709381057735.jpg"
+    },
+    {
+        "id": 22,
+        "name": "RK SHIHAB",
+        "country": "Bangladesh",
+        "type": "All-rounder",
+        "rating": 99.99,
+        "batting_style": "Right-hand bat",
+        "bowling_style": "Right-arm fast",
+        "price": 9999999,
+        "image": "https://i.ibb.co.com/jkF8dLff/rk.jpg"
+    },
+    {
+        "id": 23,
+        "name": "EMON ALI",
+        "country": "Bangladesh",
+        "type": "All-rounder",
+        "rating": 99.99,
+        "batting_style": "Right-hand bat",
+        "bowling_style": "Right-arm fast",
+        "price": 9999999,
+        "image": "https://i.ibb.co.com/k2MqFqdP/emon2.jpg"
+    },
+    {
+        "id": 24,
+        "name": "SAIF KHAN",
+        "country": "Bangladesh",
+        "type": "All-rounder",
+        "rating": 99.99,
+        "batting_style": "Right-hand bat",
+        "bowling_style": "Right-arm fast",
+        "price": 9999999,
+        "image": "https://i.ibb.co.com/39n5B7Qc/608542709-1418113883301311-5215442404270571681-n.jpg"
     },
     {
         "id": 1,
@@ -230,5 +263,4 @@
         "price": 127000,
         "image": "https://i.ibb.co.com/Mxz9kNVf/Andre-Russell.png"
     }
-   
 ]
