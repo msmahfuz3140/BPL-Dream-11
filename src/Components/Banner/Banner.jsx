@@ -17,7 +17,7 @@ const Banner = () => {
             </div> */}
 
             <div
-                className="min-h-[60vh] md:min-h-[70vh] w-full rounded-3xl flex items-center justify-center text-center px-4 md:px-10"
+                className="min-h-[50vh] md:min-h-[70vh] w-full rounded-3xl flex items-center justify-center text-center px-4 md:px-10"
                 style={{
                     backgroundImage: `url(${bgShadow})`,
                     backgroundSize: "cover",
