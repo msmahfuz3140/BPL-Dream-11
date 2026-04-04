@@ -2,7 +2,7 @@ import React from 'react';
 
 const NewsLetter = () => {
     return (
-        <div className="w-full min-h-[400px] flex items-center justify-center p-4">
+        <div className="w-full min-h-100 flex items-center justify-center p-4">
             {/* Main Container with Gradient Background */}
             <div className="relative w-full max-w-5xl overflow-hidden rounded-3xl bg-white px-6 py-16 shadow-sm border border-gray-100">
 
