@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaFlag, FaUser } from 'react-icons/fa';
+import { Bounce, Slide, toast } from 'react-toastify';
 
-const Card = ({player}) => {
+const Card = ({ player, setCoin, coin, selectedPlayers, setSelectedPlayers }) => {
+    const [isSelected, setIsSelected] = useState(false)
+    const handleChosePlayers = () => {
+        const newCoin = coin - player.price;
+        if (newCoin >= 0) {
+            toast.success(`${player.name} is selected`, { autoClose: 2000});
+            setCoin(coin - player.price)
+        }
+        else {
+            toast.error("Not Enough Balance to purchase this player", { autoClose: 2000 });
+            return;
+        }
+        setIsSelected(true);
+        setSelectedPlayers([...selectedPlayers, player]);
+    };
     return (
         <div
             key={player.id}
@@ -48,8 +63,11 @@ const Card = ({player}) => {
                 {/* প্রাইস এবং বাটন */}
                 <div className="flex justify-between items-center pt-1">
                     <p className="font-bold text-black">Price: ${player.price}</p>
-                    <button className="btn btn-outline btn-sm border-gray-300 hover:bg-[#E7FE29] hover:text-black hover:border-[#E7FE29] rounded-lg transition-all duration-300 capitalize px-4 font-bold">
-                        Choose Player
+                    <button
+                        className="btn btn-outline btn-md border-gray-300 hover:bg-[#85fe29] hover:text-black hover:border-[#8cfe29] rounded-lg transition-all duration-300 capitalize px-4 font-bold text-md"
+                        onClick={handleChosePlayers}
+                        disabled={isSelected}>
+                        {isSelected === true ? "Selected" : "Choose Player"}
                     </button>
                 </div>
             </div>

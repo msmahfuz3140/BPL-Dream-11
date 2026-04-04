@@ -2,8 +2,8 @@ import React from 'react';
 import { FaFlag, FaStar, FaUser } from 'react-icons/fa';
 import Card from '../UI/Card';
 
-const AvailablePlayers = ({ players }) => {
-    console.log(players);
+const AvailablePlayers = ({ players, setCoin, coin, selectedPlayers, setSelectedPlayers}) => {
+    // console.log(players);
     return (
         // <div className="card bg-base-100 w-96 shadow-sm">
         //     <figure>
@@ -93,7 +93,14 @@ const AvailablePlayers = ({ players }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-4">
             {players.map((player) => (
-                <Card player={player} key={player.id}></Card>
+                <Card 
+                coin={coin} 
+                setCoin={setCoin} 
+                player={player} 
+                key={player.id}
+                selectedPlayers={selectedPlayers}
+                setSelectedPlayers={setSelectedPlayers}
+                ></Card>
             ))}
         </div>
 

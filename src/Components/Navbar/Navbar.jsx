@@ -5,7 +5,7 @@ import navImg from '../../assets/logo.png'
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
-const Navbar = () => {
+const Navbar = ({coin}) => {
     const [open, setOpen] = useState(false);
     return (
         // <div className="navbar bg-base-100 mt-10 shadow-sm">
@@ -26,7 +26,7 @@ const Navbar = () => {
         //     </div>
         // </div>
 
-        <div className="navbar bg-base-100 mt-4 px-4 md:px-8 lg:px-12 py-2 rounded-xl shadow-sm relative">
+        <div className="navbar bg-base-100 mt-4 px-4 md:px-8 lg:px-12 py-2 rounded-xl shadow-sm sticky top-0 z-50">
 
             {/* LEFT : LOGO */}
             <div className="flex-1">
@@ -53,9 +53,9 @@ const Navbar = () => {
                 </a>
 
                 {/* Coin */}
-                <button className="flex items-center gap-2 text-sm font-semibold border border-gray-300 rounded-md px-3 py-1.5 hover:shadow transition">
-                    <span className="text-2xl">
-                        0 <span className="text-success">coin</span>
+                <button className="flex items-center gap-2 font-semibold border border-gray-300 rounded-md px-2 md:px-3 py-1.5 hover:shadow transition">
+                    <span className="text-2xl font-bold text-red-400">
+                       <span>{coin}</span> <span className="text-success">Coin</span>
                     </span>
                     <img src={dollerImg} className="w-4" />
                 </button>
@@ -66,8 +66,8 @@ const Navbar = () => {
 
                 {/* Coin Middle */}
                 <button className="flex items-center gap-1 text-sm font-semibold border border-gray-300 rounded-md px-2 py-1">
-                    <span>
-                        0 <span className="text-success">coin</span>
+                    <span className='font-bold text-red-400'>
+                        {coin} <span className="text-success">Coin</span>
                     </span>
                     <img src={dollerImg} className="w-4" />
                 </button>
